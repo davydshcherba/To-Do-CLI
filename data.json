@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "text": "Brush Teeth",
+    "done": "True",
+    "created": "01.07.2016"
+  },
+  {
+    "id": 2,
+    "text": "Buy groceries",
+    "done": "False",
+    "created": "02.07.2016"
+  },
+  {
+    "id": 3,
+    "text": "Complete Python project",
+    "done": "True",
+    "created": "03.07.2016"
+  },
+  {
+    "id": 4,
+    "text": "Call mother",
+    "done": "False",
+    "created": "04.07.2016"
+  },
+  {
+    "id": 5,
+    "text": "Review code",
+    "done": "True",
+    "created": "05.07.2016"
+  },
+  {
+    "id": 6,
+    "text": "Fix iOS app bug",
+    "done": "False",
+    "created": "06.07.2016"
+  },
+  {
+    "id": 7,
+    "text": "Write documentation",
+    "done": "True",
+    "created": "07.07.2016"
+  },
+  {
+    "id": 8,
+    "text": "Deploy FastAPI backend",
+    "done": "False",
+    "created": "08.07.2016"
+  },
+  {
+    "id": 9,
+    "text": "Attend lecture",
+    "done": "True",
+    "created": "09.07.2016"
+  },
+  {
+    "id": 10,
+    "text": "Update dependencies",
+    "done": "False",
+    "created": "10.07.2016"
+  },
+  {
+    "id": 11,
+    "text": "Clean workspace",
+    "done": "True",
+    "created": "11.07.2016"
+  },
+  {
+    "id": 12,
+    "text": "Prepare presentation",
+    "done": "False",
+    "created": "12.07.2016"
+  },
+  {
+    "id": 13,
+    "text": "Test new feature",
+    "done": "True",
+    "created": "13.07.2016"
+  },
+  {
+    "id": 14,
+    "text": "Review pull request",
+    "done": "False",
+    "created": "14.07.2016"
+  },
+  {
+    "id": 15,
+    "text": "Exercise 30 minutes",
+    "done": "True",
+    "created": "15.07.2016"
+  },
+  {
+    "id": 16,
+    "text": "Backup database",
+    "done": "False",
+    "created": "16.07.2016"
+  },
+  {
+    "id": 17,
+    "text": "Send report",
+    "done": "True",
+    "created": "17.07.2016"
+  },
+  {
+    "id": 18,
+    "text": "Install MacBook updates",
+    "done": "False",
+    "created": "18.07.2016"
+  },
+  {
+    "id": 19,
+    "text": "Organize files",
+    "done": "True",
+    "created": "19.07.2016"
+  },
+  {
+    "id": 20,
+    "text": "Plan next sprint",
+    "done": "False",
+    "created": "20.07.2016"
+  }
+]
