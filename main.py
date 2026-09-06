@@ -16,16 +16,18 @@ def list_command():
             data = json.load(file)
             print(json.dumps(data, indent=2, ensure_ascii=False))
 
+@logger
+def add_command():
+    id = int(input("Enter ID: "))
+    text = input("Enter text: ")
+    done = input("Is Done (True/False): ")
+    created = input("Enter date (01.01.2000): ")
 
-if command == "list":
-    list_command()
-
-elif command == "add":
     new_data = {
-        "id": 34,
-        "text": "Lorem ipsum",
-        "done": "False",
-        "created": "09.07.2016"
+        "id": id,
+        "text": text,
+        "done": done,
+        "created": created
     }
     
     try:
@@ -42,3 +44,9 @@ elif command == "add":
         json.dump(existing_data, file, indent=2, ensure_ascii=False)
     
     print(f"Add! Tasks total: {len(existing_data)}")
+
+if command == "list":
+    list_command()
+
+elif command == "add":
+    add_command()
