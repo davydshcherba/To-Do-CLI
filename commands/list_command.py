@@ -3,6 +3,6 @@ import json
 
 @logger
 def list_command():
-    with open('data.json', 'r', encoding='utf-8') as file:
+    with open("json/tasks.json", 'r', encoding='utf-8') as file:
             data = json.load(file)
             print(json.dumps(data, indent=2, ensure_ascii=False))

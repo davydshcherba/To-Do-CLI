@@ -20,7 +20,7 @@ def add_command(* ,id: int, text: str, done: str, created: str):
         existing_data = [existing_data]
     existing_data.append(new_data)
     
-    with open("data.json", "w", encoding="utf-8") as file:
+    with open("json/tasks.json", "w", encoding="utf-8") as file:
         json.dump(existing_data, file, indent=2, ensure_ascii=False)
     
     print(f"Add! Tasks total: {len(existing_data)}")
