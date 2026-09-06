@@ -1,7 +1,11 @@
 import json
 from typing import Callable
 
-command = input("add, list, done, remove: ")
+try:
+    command = input("add, list, done, remove: ")
+except ValueError:
+    print("Something went wrong..")
+    print(ValueError)
 
 def logger(func: Callable):
     def wrapper(*args,**kwargs):
@@ -41,10 +45,14 @@ def add_command(* ,id: int, text: str, done: str, created: str):
 
 if command == "list":
     list_command()
-
 elif command == "add":
     id = int(input("Enter ID: "))
     text = input("Enter text: ")
     done = input("Is Done (True/False): ")
     created = input("Enter date (01.01.2000): ")
     add_command(id=id,text=text,done=done,created=created)
+else:
+    print("                   :(                    ")
+    print("|------------------404------------------|")
+    print("|        You wrote incorrect command    |")
+    print("|------------------404------------------|")
