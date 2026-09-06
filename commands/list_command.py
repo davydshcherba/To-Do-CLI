@@ -1,4 +1,4 @@
-from decorators.logger import logger
+from utils.decorators.logger import logger
 import json
 
 @logger

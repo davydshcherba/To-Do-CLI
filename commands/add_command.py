@@ -1,5 +1,5 @@
 import json
-from decorators.logger import logger
+from utils.decorators.logger import logger
 
 @logger
 def add_command(* ,id: int, text: str, done: str, created: str):
