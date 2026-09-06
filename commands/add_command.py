@@ -11,8 +11,9 @@ def add_command(* ,id: int, text: str, done: str, created: str):
     }
     
     try:
-        with open("data.json", "r", encoding="utf-8") as file:
-            existing_data = json.load(file)
+        with open("json/tasks.json", "r", encoding="utf-8") as file:
+            content = file.read().strip()
+            existing_data = json.loads(content) if content else []
     except FileNotFoundError:
         existing_data = []
     
