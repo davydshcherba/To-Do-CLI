@@ -1,14 +1,24 @@
 import json
+from typing import Callable
 
 
 command = input("add, list, done, remove: ")
 
+def logger(func: Callable):
+    def wrapper():
+        print(f"{func} was called")
+        func()
+    return wrapper
+
+@logger
+def list_command():
+    with open('data.json', 'r', encoding='utf-8') as file:
+            data = json.load(file)
+            print(json.dumps(data, indent=2, ensure_ascii=False))
 
 
 if command == "list":
-    with open('data.json', 'r', encoding='utf-8') as file:
-        data = json.load(file)
-        print(json.dumps(data, indent=2, ensure_ascii=False))
+    list_command()
 
 elif command == "add":
     new_data = {
