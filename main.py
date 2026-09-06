@@ -1,13 +1,12 @@
 import json
 from typing import Callable
 
-
 command = input("add, list, done, remove: ")
 
 def logger(func: Callable):
-    def wrapper():
+    def wrapper(*args,**kwargs):
         print(f"{func} was called")
-        func()
+        func(*args,**kwargs)
     return wrapper
 
 @logger
@@ -17,12 +16,7 @@ def list_command():
             print(json.dumps(data, indent=2, ensure_ascii=False))
 
 @logger
-def add_command():
-    id = int(input("Enter ID: "))
-    text = input("Enter text: ")
-    done = input("Is Done (True/False): ")
-    created = input("Enter date (01.01.2000): ")
-
+def add_command(* ,id: int, text: str, done: str, created: str):
     new_data = {
         "id": id,
         "text": text,
@@ -49,4 +43,8 @@ if command == "list":
     list_command()
 
 elif command == "add":
-    add_command()
+    id = int(input("Enter ID: "))
+    text = input("Enter text: ")
+    done = input("Is Done (True/False): ")
+    created = input("Enter date (01.01.2000): ")
+    add_command(id=id,text=text,done=done,created=created)
