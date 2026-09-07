@@ -7,6 +7,8 @@ def logger(func: Callable):
         print("")
         print(colored(f"{func} was called","red"))
         print("")
-        print(colored("|--------------------logger---------------------|", "red"))       
+        print(colored("|--------------------logger---------------------|", "red")) 
+        print(colored("|--------------------result---------------------|", "green"))    
+        print(colored("|--------------------result---------------------|", "green"))       
         func(*args,**kwargs)
     return wrapper
