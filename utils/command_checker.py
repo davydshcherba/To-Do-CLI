@@ -1,6 +1,7 @@
 from commands.list_command import list_command
 from commands.add_command import add_command
 from commands.done_command import done_command
+from termcolor import colored
 
 def command_checker(*, command):
     if command == "list":
@@ -9,8 +10,11 @@ def command_checker(*, command):
         id = int(input("Enter ID: "))
         text = input("Enter text: ")
         done = input("Is Done (True/False): ")
-        created = input("Enter date (01.01.2000): ")
-        add_command(id=id,text=text,done=done,created=created)
+        if done == "True" or done == "False":
+            created = input("Enter date (01.01.2000): ")
+            add_command(id=id,text=text,done=done,created=created)
+        else:
+            print(colored("You wrote incorrect done field","red"))
     elif command == "done":
         id = int(input("Enter ID: "))
         done_command(id=id)
