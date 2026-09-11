@@ -8,4 +8,8 @@ while True:
     except ValueError:
         print("Something went wrong..")
         print(ValueError)
+    except KeyboardInterrupt:
+        print("\nGood Bye")
+        exit()
+
 
