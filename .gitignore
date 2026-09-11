@@ -1,3 +1,9 @@
 json/*
 __pycache__/*
 TODO.md
+_log/*
+
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
