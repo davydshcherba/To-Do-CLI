@@ -4,7 +4,7 @@ import json
 
 def logger(func: Callable):
     def wrapper(*args,**kwargs):
-        today = datetime.today().strftime('%Y-%m-%d') # 2026-09-11
+        today = datetime.today().strftime('%Y-%m-%d')
         print(func)
         dataLog = {
             "log": f"{func}",
