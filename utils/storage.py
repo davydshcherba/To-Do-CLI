@@ -16,7 +16,7 @@ def load_tasks():
 
     return data
 
-def save_tasks(existing_data):
+def save_task(existing_data):
     os.makedirs(os.path.dirname(TASKS_FILE), exist_ok=True)
     with open(TASKS_FILE, "w", encoding="utf-8") as file:
         json.dump(existing_data, file, indent=2, ensure_ascii=False)
