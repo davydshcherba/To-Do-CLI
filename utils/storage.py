@@ -1,7 +1,9 @@
 import json
 import os
+from pathlib import Path
 
-TASKS_FILE = "json/tasks.json"
+APP_DIR = Path.home() / ".todo-cli"
+TASKS_FILE = APP_DIR / "tasks.json"
 
 def load_tasks():
     try:
