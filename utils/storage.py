@@ -10,4 +10,8 @@ def load_tasks():
     except FileNotFoundError:
             data = []
 
+    if not isinstance(existing_data, list):
+        existing_data = [existing_data]
+
     return data
+
