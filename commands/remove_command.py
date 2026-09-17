@@ -1,15 +1,11 @@
 from utils.decorators.logger import logger
+from utils.storage import load_tasks
 import json
 
 
 @logger
 def remove_command(*, id: int):
-    try:
-        with open("json/tasks.json", "r", encoding="utf-8") as file:
-            content = file.read().strip()
-            data = json.loads(content) if content else []
-    except FileNotFoundError:
-        data = []
+    data = load_tasks()
 
     new_data = [task for task in data if task["id"] != id]
 
