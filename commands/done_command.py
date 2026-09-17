@@ -1,5 +1,5 @@
 from utils.decorators.logger import logger
-from utils.storage import load_tasks, save_tasks
+from utils.storage import load_tasks, save_task
 
 
 @logger
@@ -17,6 +17,6 @@ def done_command(*, id: int):
         print(f"Task with id {id} not found.")
         return
 
-    save_tasks(data)
+    save_task(data)
 
     print(f"Task {id} marked as done!")
