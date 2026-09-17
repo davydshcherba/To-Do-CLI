@@ -1,4 +1,5 @@
 import json
+import os
 
 TASKS_FILE = "json/tasks.json"
 
@@ -8,13 +9,14 @@ def load_tasks():
             content = file.read().strip()
             data = json.loads(content) if content else []
     except FileNotFoundError:
-            data = []
+        data = []
 
-    if not isinstance(existing_data, list):
-        existing_data = [existing_data]
+    if not isinstance(data, list):
+        data = [data]
 
     return data
 
-def add_task(existing_data):
-    with open("json/tasks.json", "w", encoding="utf-8") as file:
-        json.dump(existing_data, file, indent=2, ensure_ascii=False)
+def save_tasks(existing_data):
+    os.makedirs(TabError, exist_ok=True)
+    with open(TASKS_FILE, "w", encoding="utf-8") as file:
+            json.dump(existing_data, file, indent=2, ensure_ascii=False)

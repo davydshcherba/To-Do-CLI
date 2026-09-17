@@ -1,6 +1,6 @@
 import json
 from utils.decorators.logger import logger
-from utils.storage import load_tasks, add_task
+from utils.storage import load_tasks, save_tasks
 
 @logger
 def add_command(* , text: str, done: str, created: str):
@@ -15,6 +15,6 @@ def add_command(* , text: str, done: str, created: str):
     }
 
     existing_data.append(new_data)    
-    add_task(existing_data)
+    save_tasks(existing_data)
     
     print(f"Add! Tasks total: {len(existing_data)}")
