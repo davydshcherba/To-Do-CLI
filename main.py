@@ -1,3 +1,4 @@
+import sys
 from utils.command_checker import command_checker
 
 while True:
@@ -16,11 +17,11 @@ while True:
         print("")
         command = input("add, list, done, remove: ")
         command_checker(command=command)
-    except ValueError:
+    except ValueError as error:
         print("Something went wrong..")
-        print(ValueError)
-    except KeyboardInterrupt:
+        print(error)
+    except (KeyboardInterrupt, EOFError):
         print("\nGood Bye")
-        exit()
+        sys.exit()
 
 
