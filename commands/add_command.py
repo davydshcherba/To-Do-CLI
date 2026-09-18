@@ -3,7 +3,7 @@ from utils.decorators.logger import logger
 from utils.storage import load_tasks, save_task
 
 @logger
-def add_command(* , text: str, done: str):
+def add_command(* , text: str):
     existing_data = load_tasks()
     next_id = max((task["id"] for task in existing_data), default=0) + 1
     created = datetime.now().strftime("%d.%m.%Y")
@@ -11,7 +11,7 @@ def add_command(* , text: str, done: str):
     new_data = {
         "id": next_id,
         "text": text,
-        "done": done,
+        "done": False,
         "created": created
     }
 
