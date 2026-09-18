@@ -9,7 +9,7 @@ def done_command(*, id: int):
     found = False
     for task in data:
         if task["id"] == id:
-            task["done"] = "True"
+            task["done"] = True
             found = True
             break
 

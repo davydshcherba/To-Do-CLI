@@ -16,6 +16,10 @@ def load_tasks():
     if not isinstance(data, list):
         data = [data]
 
+    for task in data:
+        if isinstance(task.get("done"), str):
+            task["done"] = task["done"] == "True"
+
     return data
 
 def save_task(existing_data):
